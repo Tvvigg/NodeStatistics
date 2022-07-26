@@ -3,7 +3,7 @@
  * @param {Array} arr any array
  */
 function createFrequencyCounter(arr) {
-  return arr.reduce(function(acc, next) {
+  return arr.reduce(function (acc, next) {
     acc[next] = (acc[next] || 0) + 1;
     return acc;
   }, {});
@@ -51,14 +51,16 @@ function convertAndValidateNumsArray(numsAsStrings) {
   return result;
 }
 
-function findMean(nums){
-  if(nums.length === 0) return 0;
-  return nums.reduce(function (acc, cur) {
-    return acc + cur;
-  }) / nums.length
+function findMean(nums) {
+  if (nums.length === 0) return 0;
+  return (
+    nums.reduce(function (acc, cur) {
+      return acc + cur;
+    }) / nums.length
+  );
 }
 
-function findMedian(nums){
+function findMedian(nums) {
   // sort and get the middle element
 
   nums.sort((a, b) => a - b);
@@ -71,15 +73,13 @@ function findMedian(nums){
   } else {
     median = nums[middleIndex];
   }
-  return median
+  return median;
 }
-
-
 
 module.exports = {
   createFrequencyCounter,
   findMean,
   findMedian,
   findMode,
-  convertAndValidateNumsArray
+  convertAndValidateNumsArray,
 };
