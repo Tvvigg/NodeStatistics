@@ -1,4 +1,4 @@
-/** ExpressError extends the normal JS error */
+/** ExpressError extends the normal JS error. */
 
 class ExpressError extends Error {
   constructor(message, status) {

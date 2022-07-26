@@ -17,7 +17,7 @@ app.get("/mean", function (req, res, next) {
     );
   }
   let numsAsStrings = req.query.nums.split(",");
-  // check if anything bad was put in
+  // check if anything bad was input
   let nums = convertAndValidateNumsArray(numsAsStrings);
   if (nums instanceof Error) {
     throw new ExpressError(nums.message);
